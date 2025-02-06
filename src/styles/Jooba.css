@@ -1,0 +1,270 @@
+.jooba-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Header */
+.jooba-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.jooba-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a77bfc;
+  text-transform: uppercase;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.lang-btn.active {
+  background-color: black;
+  color: white;
+}
+
+/* Content */
+.jooba-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0;
+  align-items: center;
+}
+
+/* Timer Section */
+.jooba-timer {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+/* Label */
+.timer-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Time Picker */
+.time-picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-input {
+  width: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  background: white;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.time-separator {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Actions */
+.jooba-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn, .ok-btn {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.ok-btn {
+  background-color: #a77bfc;
+  color: white;
+}
+
+.ok-btn:hover {
+  background-color: #8a5fd4;
+}
+
+/* Image */
+.jooba-image img {
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* Message Section */
+.jooba-message {
+  margin: 20px 0;
+}
+
+.jooba-highlight {
+  font-weight: bold;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* User Wins Section */
+.jooba-wins {
+  margin-top: 30px;
+}
+
+.jooba-wins-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.win-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Navigation */
+.jooba-navigation {
+  margin-top: 10px;
+}
+
+.nav-btn {
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 16px; /* Set a proper font size */
+  min-width: 50px; /* Prevent excessive width */
+  max-width: 100px; /* Limit max width */
+  height: auto; /* Adjust height dynamically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .jooba-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .jooba-timer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .time-picker {
+    justify-content: center;
+  }
+
+  .jooba-actions {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+/* Header */
+.jooba-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Right Section (Hello, Language Switcher, Logout) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between elements */
+}
+
+/* Welcome text */
+.welcome-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Language switcher */
+.language-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+/* Language buttons */
+.lang-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.lang-btn.active {
+  background-color: black;
+  color: white;
+}
+
+/* Logout button */
+.logout-btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.2s ease-in-out;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+  
+}

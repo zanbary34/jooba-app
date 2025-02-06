@@ -1,0 +1,48 @@
+.jooba-wins {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.wins-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.wins-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.jooba-wins-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  gap: 15px;
+}
+
+.win-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 250px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wins-wrapper {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .jooba-wins-container {
+      flex-direction: column;
+  }
+
+  .win-card {
+      width: 100%;
+  }
+}

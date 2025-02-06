@@ -1,0 +1,21 @@
+.country-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.dropdown-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.country-dropdown {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+}
