@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./jooba-backhand
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./jooba-backhand:/app
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=sqlite:///database.db
+      - SECRET_KEY=your-secure-secret-key
+    depends_on:
+      - sqlite
+
+  frontend:
+    build: ./jooba-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./jooba-frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+
+  sqlite:
+    image: nouchka/sqlite3
+    volumes:
+      - ./jooba-backhand/database.db:/database/database.db
+    command: tail -f /dev/null
