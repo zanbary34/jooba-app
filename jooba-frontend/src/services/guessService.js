@@ -1,6 +1,7 @@
 
-const API_URL = 'http://127.0.0.1:5000/guess';
-const WINS_API_URL = 'http://127.0.0.1:5000/wins';
+
+const API_URL = `${process.env.REACT_APP_API_URL}/guess`;
+const WINS_API_URL = `${process.env.REACT_APP_API_URL}/wins`;
 
 const GuessService = {
   submitGuess: async (username, country, hour, minute) => {

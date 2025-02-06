@@ -4,7 +4,7 @@ services:
   backend:
     build: ./jooba-backhand
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Expose without making it public
     volumes:
       - ./jooba-backhand:/app
     environment:
@@ -13,6 +13,8 @@ services:
       - SECRET_KEY=your-secure-secret-key
     depends_on:
       - sqlite
+    networks:
+      - internal_network
 
   frontend:
     build: ./jooba-frontend
@@ -23,9 +25,19 @@ services:
       - /app/node_modules
     depends_on:
       - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    networks:
+      - internal_network
 
   sqlite:
     image: nouchka/sqlite3
     volumes:
       - ./jooba-backhand/database.db:/database/database.db
     command: tail -f /dev/null
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    driver: bridge

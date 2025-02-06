@@ -11,7 +11,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:5000/signup", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {
         username,
         password,
       });
